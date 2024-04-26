@@ -1,7 +1,3 @@
-Sure, here's a README file for a Linux services sanity checker:
-
----
-
 # Linux Services Sanity Checker
 
 ## Overview

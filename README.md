@@ -1,13 +1,13 @@
-# Linux Services Sanity Checker
+# ServTrack
 
 ## Overview
 
-The Linux Services Sanity Checker is a tool designed to ensure the proper functioning of essential services on a Linux system. It automates the process of checking the status of specified services and alerts the user if any of the services are not running as expected.
+ServTrack is a tool designed to ensure the proper functioning of essential services on a Linux system. It automates the process of checking the status of specified services and alerts the user if any of the services are not running as expected.
 
 ## Features
 
 - **Service Status Check:** Automatically checks the status of specified services on the Linux system.
-- **Alerting Mechanism:** Alerts the user if any of the services are not running or are in an unexpected state.
+- **Alerting Mechanism:** Alerts the user if any of the services are not running or are unexpected.
 - **Customizable Configuration:** Allows users to specify which services to monitor and set thresholds for acceptable states.
 
 ## Requirements
@@ -43,7 +43,7 @@ python sanity_checker.py
 Edit the `services_to_check` list in the `sanity_checker.py` script to specify which services you want to monitor. Each item in the list should be a string representing the name of a service.
 
 ```python
-services_to_check = ['apache2', 'nginx', 'mysql']
+services_to_check = ['apache2', 'nginx', 'MySQL']
 ```
 
 ## License

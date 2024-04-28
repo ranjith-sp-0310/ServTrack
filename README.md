@@ -2,57 +2,45 @@
 
 ## Overview
 
-ServTrack is a tool designed to ensure the proper functioning of essential services on a Linux system. It automates the process of checking the status of specified services and alerts the user if any of the services are not running as expected.
+ServTrack is a lightweight tool designed to ensure the smooth operation of critical services on a Linux system. It simplifies the process of monitoring service statuses, providing timely alerts if any services deviate from the expected state.
 
-## Features
+## Key Features
 
-- **Service Status Check:** Automatically checks the status of specified services on the Linux system.
-- **Alerting Mechanism:** Alerts the user if any of the services are not running or are unexpected.
-- **Customizable Configuration:** Allows users to specify which services to monitor and set thresholds for acceptable states.
+- **Automated Service Status Checks:** Effortlessly verifies the operational status of designated services.
+- **Alerting Mechanism:** Instantly notifies users of any service anomalies or unexpected disruptions.
+- **Flexible Configuration:** Customize which services to monitor and define acceptable operational thresholds.
 
 ## Requirements
 
 - Linux-based operating system
 - Python 3.x installed
-- Paramiko library (`pip install paramiko`) for SSH connections (if checking services on remote machines)
+- Install the required libraries using pip
 
 ## Installation
 
-1. Clone or download the repository to your local machine.
-2. Ensure Python 3.x is installed on your system.
-3. Install the Paramiko library by running `pip install paramiko` in your terminal.
+1. Clone or download the repository to your local environment.
+2. Ensure Python 3.x is installed.
+3. Install the Paramiko library by executing `pip install paramiko` in your terminal.
 
 ## Usage
 
-1. Configure the `services_to_check` list in the `ServTrack.py` script to specify which services you want to monitor.
-2. If checking services on remote machines, provide the appropriate SSH connection details (hostname, username, password) in the script.
+1. Configure the `services_to_check` list in the `ServTrack.py` script to specify the services for monitoring.
+2. If checking services on remote machines, input the relevant SSH connection details (hostname, username, password) in the `.env` file.
 3. Run the `ServTrack.py` script.
-4. View the output to see the status of the specified services.
-5. If any services are not running as expected, take appropriate action to troubleshoot and resolve the issue.
-
-## Example
-
-```bash
-python ServTrack.py
-```
+4. Review the output to observe the status of the specified services.
+5. If any services are not operating as expected, promptly address the issues to maintain system integrity.
 
 ## Configuration
 
-### `services_to_check` List
+### `.env` File
 
-Edit the `services_to_check` list in the `ServTrack.py` script to specify which services you want to monitor. Each item in the list should be a string representing the name of a service.
+Adjust the `.env` file in the project directory to set the necessary environment variables for the script:
 
-```python
-services_to_check = ['apache2', 'nginx', 'MySQL']
+```dotenv
+HOSTNAME=your_server_ip
+USERNAME=your_username
+PASSWORD=your_password
+SENDER_EMAIL=your_email@gmail.com
+RECEIVER_EMAIL=receiver_email@gmail.com
+EMAIL_PASSWORD=your_email_password
 ```
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Inspired by the need for a simple tool to monitor essential services on Linux systems.
-
----
-

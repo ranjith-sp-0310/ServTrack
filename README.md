@@ -24,23 +24,23 @@ ServTrack is a tool designed to ensure the proper functioning of essential servi
 
 ## Usage
 
-1. Configure the `services_to_check` list in the `sanity_checker.py` script to specify which services you want to monitor.
+1. Configure the `services_to_check` list in the `ServTrack.py` script to specify which services you want to monitor.
 2. If checking services on remote machines, provide the appropriate SSH connection details (hostname, username, password) in the script.
-3. Run the `sanity_checker.py` script.
+3. Run the `ServTrack.py` script.
 4. View the output to see the status of the specified services.
 5. If any services are not running as expected, take appropriate action to troubleshoot and resolve the issue.
 
 ## Example
 
 ```bash
-python sanity_checker.py
+python ServTrack.py
 ```
 
 ## Configuration
 
 ### `services_to_check` List
 
-Edit the `services_to_check` list in the `sanity_checker.py` script to specify which services you want to monitor. Each item in the list should be a string representing the name of a service.
+Edit the `services_to_check` list in the `ServTrack.py` script to specify which services you want to monitor. Each item in the list should be a string representing the name of a service.
 
 ```python
 services_to_check = ['apache2', 'nginx', 'MySQL']
